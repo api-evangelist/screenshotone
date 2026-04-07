@@ -9,9 +9,9 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Images
   - Screenshots
   - Web Rendering
-  - Images
 url: >-
   https://raw.githubusercontent.com/api-evangelist/screenshotone/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -27,9 +27,9 @@ apis:
       languages.
     humanURL: https://screenshotone.com/
     tags:
+      - Images
       - Screenshots
       - Web Rendering
-      - Images
     properties:
       - type: Documentation
         url: https://screenshotone.com/docs/
