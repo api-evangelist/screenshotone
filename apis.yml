@@ -35,6 +35,8 @@ apis:
         url: https://screenshotone.com/docs/
       - type: Getting Started
         url: https://screenshotone.com/docs/getting-started/
+      - url: openapi/screenshotone-openapi.yml
+        type: OpenAPI
 common:
   - type: Website
     url: https://screenshotone.com/
