@@ -46,6 +46,12 @@ common:
     url: https://github.com/screenshotone
   - type: Sign Up
     url: https://screenshotone.com/
+  - type: Integrations
+    url: https://screenshotone.com/integrations/
+integrations:
+  - name: Website Screenshots
+  - name: Full Page Screenshots
+  - name: Scrolling Screenshots
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
