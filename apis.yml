@@ -33,7 +33,7 @@ apis:
     properties:
       - type: Documentation
         url: https://screenshotone.com/docs/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://screenshotone.com/docs/getting-started/
       - url: openapi/screenshotone-openapi.yml
         type: OpenAPI
@@ -42,9 +42,9 @@ common:
     url: https://screenshotone.com/
   - type: Documentation
     url: https://screenshotone.com/docs/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/screenshotone
-  - type: Sign Up
+  - type: SignUp
     url: https://screenshotone.com/
   - type: Integrations
     url: https://screenshotone.com/integrations/
