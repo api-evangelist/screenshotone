@@ -15,7 +15,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/screenshotone/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-03-16'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
   - aid: screenshotone:screenshotone
@@ -48,6 +48,12 @@ common:
     url: https://screenshotone.com/
   - type: Integrations
     url: https://screenshotone.com/integrations/
+  - name: MCP Server
+    url: https://github.com/screenshotone/mcp
+    type: MCPServer
+  - name: Agent Skills
+    url: https://github.com/screenshotone/skills
+    type: AgentSkill
 integrations:
   - name: Website Screenshots
   - name: Full Page Screenshots
