@@ -1,0 +1,175 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ScreenshotOne API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_key",
+      "value": "{{access_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Screenshots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Take a screenshot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.screenshotone.com/take",
+            "params": [
+              {
+                "name": "url",
+                "value": "",
+                "type": "query",
+                "description": "The URL of the website to screenshot."
+              },
+              {
+                "name": "html",
+                "value": "",
+                "type": "query",
+                "description": "Raw HTML to render. One of url, html, or markdown is required."
+              },
+              {
+                "name": "markdown",
+                "value": "",
+                "type": "query",
+                "description": "Markdown content to render. One of url, html, or markdown is required."
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query",
+                "description": "Output image format."
+              },
+              {
+                "name": "full_page",
+                "value": "",
+                "type": "query",
+                "description": "Capture the entire scrollable page."
+              },
+              {
+                "name": "viewport_width",
+                "value": "",
+                "type": "query",
+                "description": "Viewport width in pixels."
+              },
+              {
+                "name": "viewport_height",
+                "value": "",
+                "type": "query",
+                "description": "Viewport height in pixels."
+              },
+              {
+                "name": "block_ads",
+                "value": "",
+                "type": "query",
+                "description": "Block advertisements during rendering."
+              },
+              {
+                "name": "block_cookie_banners",
+                "value": "",
+                "type": "query",
+                "description": "Block cookie consent banners during rendering."
+              }
+            ]
+          },
+          "docs": "Captures a screenshot of the requested URL or rendered HTML/Markdown content."
+        },
+        {
+          "info": {
+            "name": "Take a screenshot (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.screenshotone.com/take",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Same as GET /take but accepts options as a JSON request body."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Animations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Render an animated screenshot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.screenshotone.com/animate",
+            "params": [
+              {
+                "name": "url",
+                "value": "",
+                "type": "query",
+                "description": "The URL of the website to screenshot."
+              },
+              {
+                "name": "scenario",
+                "value": "",
+                "type": "query",
+                "description": "Animation scenario (default, scroll, navigation)"
+              }
+            ]
+          },
+          "docs": "Captures an animated rendering of a URL (scroll, navigation, default scenarios)."
+        },
+        {
+          "info": {
+            "name": "Render an animated screenshot (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.screenshotone.com/animate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Render an animated screenshot (POST)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current plan usage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.screenshotone.com/usage"
+          },
+          "docs": "Retrieves request quota and consumption information for the current billing period."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
