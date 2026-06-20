@@ -5,7 +5,7 @@ description: >-
   supports GET and POST requests over HTTPS and enables capture of screenshots in PNG, JPEG, WebP, GIF and other formats
   with customizable rendering options including screen size, dark mode, ad blocking, and metadata extraction.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Images
   - Screenshots
