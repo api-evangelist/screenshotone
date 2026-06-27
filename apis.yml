@@ -41,7 +41,7 @@ common:
     url: https://screenshotone.com/docs/
   - type: GitHubOrganization
     url: https://github.com/screenshotone
-  - type: SignUp
+  - type: Signup
     url: https://screenshotone.com/
   - type: Integrations
     url: https://screenshotone.com/integrations/
@@ -50,7 +50,7 @@ common:
     type: MCPServer
   - name: Agent Skills
     url: https://github.com/screenshotone/skills
-    type: AgentSkill
+    type: AgentSkills
 integrations:
   - name: Website Screenshots
   - name: Full Page Screenshots
