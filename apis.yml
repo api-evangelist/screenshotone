@@ -33,6 +33,10 @@ apis:
       - url: openapi/screenshotone-openapi.yml
         type: OpenAPI
 common:
+  - type: DomainSecurity
+    url: security/screenshotone-domain-security.yml
+  - type: Authentication
+    url: authentication/screenshotone-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/screenshotone
   - type: Website
@@ -51,6 +55,8 @@ common:
   - name: Agent Skills
     url: https://github.com/screenshotone/skills
     type: AgentSkills
+  - url: https://screenshotone.com/blog/rss.xml
+    type: Blog
 integrations:
   - name: Website Screenshots
   - name: Full Page Screenshots

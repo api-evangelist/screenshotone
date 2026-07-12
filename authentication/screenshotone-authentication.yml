@@ -1,0 +1,24 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/screenshotone-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  - query
+schemes:
+- name: accessKeyQuery
+  type: apiKey
+  in: query
+  parameter: access_key
+  description: API access key passed as a query string parameter.
+  sources:
+  - openapi/screenshotone-openapi.yml
+- name: accessKeyHeader
+  type: apiKey
+  in: header
+  parameter: X-Access-Key
+  description: API access key passed via the X-Access-Key request header.
+  sources:
+  - openapi/screenshotone-openapi.yml
