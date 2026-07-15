@@ -33,6 +33,8 @@ apis:
       - url: openapi/screenshotone-openapi.yml
         type: OpenAPI
 common:
+  - type: AgenticAccess
+    url: agentic-access/screenshotone-agentic-access.yml
   - type: DomainSecurity
     url: security/screenshotone-domain-security.yml
   - type: Authentication
