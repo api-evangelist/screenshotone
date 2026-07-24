@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: ScreenshotOne Account API
+  description: Minimal OpenAPI description of the ScreenshotOne screenshot rendering API.
+  version: 1.0.0
+  x-generated-from: https://screenshotone.com/docs/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://api.screenshotone.com
+  description: ScreenshotOne production API
+security:
+- accessKeyQuery: []
+- accessKeyHeader: []
+tags:
+- name: Account
+paths:
+  /usage:
+    get:
+      tags:
+      - Account
+      summary: Get current plan usage
+      description: Retrieves request quota and consumption information for the current billing period.
+      responses:
+        '200':
+          description: Usage details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Usage:
+      type: object
+      description: Usage information for the API account.
+      additionalProperties: true
+    Error:
+      type: object
+      description: Generic error response.
+      properties:
+        error_code:
+          type: string
+        error_message:
+          type: string
+      additionalProperties: true
+  securitySchemes:
+    accessKeyQuery:
+      type: apiKey
+      in: query
+      name: access_key
+      description: API access key passed as a query string parameter.
+    accessKeyHeader:
+      type: apiKey
+      in: header
+      name: X-Access-Key
+      description: API access key passed via the X-Access-Key request header.
