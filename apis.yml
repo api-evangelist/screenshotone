@@ -5,7 +5,20 @@ description: >-
   supports GET and POST requests over HTTPS and enables capture of screenshots in PNG, JPEG, WebP, GIF and other formats
   with customizable rendering options including screen size, dark mode, ad blocking, and metadata extraction.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/screenshotone.png
 tags:
   - Images
   - Screenshots
@@ -15,23 +28,45 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: screenshotone:screenshotone
-    name: ScreenshotOne API
-    description: >-
-      The ScreenshotOne API provides a simple way to take screenshots of websites programmatically. It supports multiple
-      image formats, customizable rendering options, and SDKs for TypeScript, Python, Java and other languages.
-    humanURL: https://screenshotone.com/
-    tags:
-      - Images
-      - Screenshots
-      - Web Rendering
-    properties:
-      - type: Documentation
-        url: https://screenshotone.com/docs/
-      - type: GettingStarted
-        url: https://screenshotone.com/docs/getting-started/
-      - url: openapi/screenshotone-openapi.yml
-        type: OpenAPI
+- aid: screenshotone:screenshotone-account-api
+  name: ScreenshotOne Account API
+  description: The Account API from ScreenshotOne — 1 operation(s) for account.
+  humanURL: https://screenshotone.com/
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/screenshotone-account-api-openapi.yml
+  - type: Documentation
+    url: https://screenshotone.com/docs/
+  - type: GettingStarted
+    url: https://screenshotone.com/docs/getting-started/
+- aid: screenshotone:screenshotone-animations-api
+  name: ScreenshotOne Animations API
+  description: The Animations API from ScreenshotOne — 1 operation(s) for animations.
+  humanURL: https://screenshotone.com/
+  tags:
+  - Animations
+  properties:
+  - type: OpenAPI
+    url: openapi/screenshotone-animations-api-openapi.yml
+  - type: Documentation
+    url: https://screenshotone.com/docs/
+  - type: GettingStarted
+    url: https://screenshotone.com/docs/getting-started/
+- aid: screenshotone:screenshotone-screenshots-api
+  name: ScreenshotOne Screenshots API
+  description: The Screenshots API from ScreenshotOne — 1 operation(s) for screenshots.
+  humanURL: https://screenshotone.com/
+  tags:
+  - Screenshots
+  properties:
+  - type: OpenAPI
+    url: openapi/screenshotone-screenshots-api-openapi.yml
+  - type: Documentation
+    url: https://screenshotone.com/docs/
+  - type: GettingStarted
+    url: https://screenshotone.com/docs/getting-started/
 common:
   - type: AgenticAccess
     url: agentic-access/screenshotone-agentic-access.yml
