@@ -1,0 +1,18 @@
+{
+  "provider": "screenshotone",
+  "sources": [
+    "screenshotone-account-api-openapi.yml",
+    "screenshotone-animations-api-openapi.yml",
+    "screenshotone-screenshots-api-openapi.yml"
+  ],
+  "outputs": [
+    "screenshotone-account-api-openapi.yml",
+    "screenshotone-animations-api-openapi.yml",
+    "screenshotone-screenshots-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
