@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ScreenshotOne Account API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_key",
+      "value": "{{access_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current plan usage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.screenshotone.com/usage"
+          },
+          "docs": "Retrieves request quota and consumption information for the current billing period."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

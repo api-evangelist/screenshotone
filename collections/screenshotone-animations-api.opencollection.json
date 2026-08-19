@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ScreenshotOne Account Animations API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "access_key",
+      "value": "{{access_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Animations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Render an animated screenshot",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.screenshotone.com/animate",
+            "params": [
+              {
+                "name": "url",
+                "value": "",
+                "type": "query",
+                "description": "The URL of the website to screenshot."
+              },
+              {
+                "name": "scenario",
+                "value": "",
+                "type": "query",
+                "description": "Animation scenario (default, scroll, navigation)"
+              }
+            ]
+          },
+          "docs": "Captures an animated rendering of a URL (scroll, navigation, default scenarios)."
+        },
+        {
+          "info": {
+            "name": "Render an animated screenshot (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.screenshotone.com/animate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Render an animated screenshot (POST)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

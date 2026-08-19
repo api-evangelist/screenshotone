@@ -1,0 +1,435 @@
+{
+  "item": [
+    {
+      "id": "e6c83065-3414-4a8d-a7f5-b3770836a479",
+      "name": "Screenshots",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b5cd8fb9-1338-4298-bfc8-e448fbae87a9",
+          "name": "Take a screenshot",
+          "request": {
+            "name": "Take a screenshot",
+            "description": {
+              "content": "Captures a screenshot of the requested URL or rendered HTML/Markdown content.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "take"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "url",
+                  "value": "<uri>",
+                  "description": "The URL of the website to screenshot."
+                },
+                {
+                  "disabled": false,
+                  "key": "html",
+                  "value": "<string>",
+                  "description": "Raw HTML to render. One of url, html, or markdown is required."
+                },
+                {
+                  "disabled": false,
+                  "key": "markdown",
+                  "value": "<string>",
+                  "description": "Markdown content to render. One of url, html, or markdown is required."
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>",
+                  "description": "Output image format."
+                },
+                {
+                  "disabled": false,
+                  "key": "full_page",
+                  "value": "<boolean>",
+                  "description": "Capture the entire scrollable page."
+                },
+                {
+                  "disabled": false,
+                  "key": "viewport_width",
+                  "value": "<integer>",
+                  "description": "Viewport width in pixels."
+                },
+                {
+                  "disabled": false,
+                  "key": "viewport_height",
+                  "value": "<integer>",
+                  "description": "Viewport height in pixels."
+                },
+                {
+                  "disabled": false,
+                  "key": "block_ads",
+                  "value": "<boolean>",
+                  "description": "Block advertisements during rendering."
+                },
+                {
+                  "disabled": false,
+                  "key": "block_cookie_banners",
+                  "value": "<boolean>",
+                  "description": "Block cookie consent banners during rendering."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0c14b238-aee1-4319-ab0f-362f70810f09",
+              "name": "Rendered screenshot",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "take"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "html",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "markdown",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "full_page",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "viewport_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "viewport_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "block_ads",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "block_cookie_banners",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "access_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/png"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "544b2299-c33a-441f-b663-3a18a75e866c",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "take"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "url",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "html",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "markdown",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "full_page",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "viewport_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "viewport_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "block_ads",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "block_cookie_banners",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "access_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"key_0\": 734.789729858688,\n  \"key_1\": 2130\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "80fe9c47-e6dd-44f9-a740-9dc701e41d09",
+          "name": "Take a screenshot (POST)",
+          "request": {
+            "name": "Take a screenshot (POST)",
+            "description": {
+              "content": "Same as GET /take but accepts options as a JSON request body.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "take"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "image/png"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"<uri>\",\n  \"html\": \"<string>\",\n  \"markdown\": \"<string>\",\n  \"format\": \"<string>\",\n  \"full_page\": \"<boolean>\",\n  \"viewport_width\": \"<integer>\",\n  \"viewport_height\": \"<integer>\",\n  \"access_key\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "aead27db-c02b-41df-8822-70a84a1b09c6",
+              "name": "Rendered screenshot",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "take"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/png"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\",\n  \"html\": \"<string>\",\n  \"markdown\": \"<string>\",\n  \"format\": \"<string>\",\n  \"full_page\": \"<boolean>\",\n  \"viewport_width\": \"<integer>\",\n  \"viewport_height\": \"<integer>\",\n  \"access_key\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/png"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2ac17dac-aacf-451f-8cfc-39071048bb4d",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "take"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "access_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"url\": \"<uri>\",\n  \"html\": \"<string>\",\n  \"markdown\": \"<string>\",\n  \"format\": \"<string>\",\n  \"full_page\": \"<boolean>\",\n  \"viewport_width\": \"<integer>\",\n  \"viewport_height\": \"<integer>\",\n  \"access_key\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"key_0\": 734.789729858688,\n  \"key_1\": 2130\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.screenshotone.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "access_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "224bc490-14e0-456d-abbb-e5e2b6f95c9c",
+    "name": "ScreenshotOne Account Screenshots API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI description of the ScreenshotOne screenshot rendering API.",
+      "type": "text/plain"
+    }
+  }
+}
