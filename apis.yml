@@ -20,6 +20,10 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/screenshotone.png
 tags:
+  - Image
+  - Screenshots
+  - Web Rendering
+tags_raw:
   - Images
   - Screenshots
   - Web Rendering
