@@ -5,6 +5,18 @@ description: >-
   supports GET and POST requests over HTTPS and enables capture of screenshots in PNG, JPEG, WebP, GIF and other formats
   with customizable rendering options including screen size, dark mode, ad blocking, and metadata extraction.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
