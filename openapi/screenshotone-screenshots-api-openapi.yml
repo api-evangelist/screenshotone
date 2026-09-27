@@ -90,71 +90,6 @@ paths:
       operationId: postTake
       x-operation-id-source: derived
 components:
-  parameters:
-    Format:
-      name: format
-      in: query
-      description: Output image format.
-      schema:
-        type: string
-        enum:
-        - png
-        - jpeg
-        - jpg
-        - webp
-        - gif
-        - pdf
-    ViewportHeight:
-      name: viewport_height
-      in: query
-      description: Viewport height in pixels.
-      schema:
-        type: integer
-        minimum: 1
-    Markdown:
-      name: markdown
-      in: query
-      description: Markdown content to render. One of url, html, or markdown is required.
-      schema:
-        type: string
-    FullPage:
-      name: full_page
-      in: query
-      description: Capture the entire scrollable page.
-      schema:
-        type: boolean
-    Html:
-      name: html
-      in: query
-      description: Raw HTML to render. One of url, html, or markdown is required.
-      schema:
-        type: string
-    Url:
-      name: url
-      in: query
-      description: The URL of the website to screenshot.
-      schema:
-        type: string
-        format: uri
-    BlockAds:
-      name: block_ads
-      in: query
-      description: Block advertisements during rendering.
-      schema:
-        type: boolean
-    BlockCookieBanners:
-      name: block_cookie_banners
-      in: query
-      description: Block cookie consent banners during rendering.
-      schema:
-        type: boolean
-    ViewportWidth:
-      name: viewport_width
-      in: query
-      description: Viewport width in pixels.
-      schema:
-        type: integer
-        minimum: 1
   schemas:
     Error:
       type: object
@@ -187,6 +122,71 @@ components:
         access_key:
           type: string
       additionalProperties: true
+  parameters:
+    Html:
+      name: html
+      in: query
+      description: Raw HTML to render. One of url, html, or markdown is required.
+      schema:
+        type: string
+    BlockAds:
+      name: block_ads
+      in: query
+      description: Block advertisements during rendering.
+      schema:
+        type: boolean
+    FullPage:
+      name: full_page
+      in: query
+      description: Capture the entire scrollable page.
+      schema:
+        type: boolean
+    Markdown:
+      name: markdown
+      in: query
+      description: Markdown content to render. One of url, html, or markdown is required.
+      schema:
+        type: string
+    ViewportWidth:
+      name: viewport_width
+      in: query
+      description: Viewport width in pixels.
+      schema:
+        type: integer
+        minimum: 1
+    BlockCookieBanners:
+      name: block_cookie_banners
+      in: query
+      description: Block cookie consent banners during rendering.
+      schema:
+        type: boolean
+    Format:
+      name: format
+      in: query
+      description: Output image format.
+      schema:
+        type: string
+        enum:
+        - png
+        - jpeg
+        - jpg
+        - webp
+        - gif
+        - pdf
+    Url:
+      name: url
+      in: query
+      description: The URL of the website to screenshot.
+      schema:
+        type: string
+        format: uri
+    ViewportHeight:
+      name: viewport_height
+      in: query
+      description: Viewport height in pixels.
+      schema:
+        type: integer
+        minimum: 1
   securitySchemes:
     accessKeyQuery:
       type: apiKey

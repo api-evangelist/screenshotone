@@ -37,10 +37,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Usage:
-      type: object
-      description: Usage information for the API account.
-      additionalProperties: true
     Error:
       type: object
       description: Generic error response.
@@ -49,6 +45,10 @@ components:
           type: string
         error_message:
           type: string
+      additionalProperties: true
+    Usage:
+      type: object
+      description: Usage information for the API account.
       additionalProperties: true
   securitySchemes:
     accessKeyQuery:
