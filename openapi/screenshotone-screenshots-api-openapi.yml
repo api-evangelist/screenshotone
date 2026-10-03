@@ -123,43 +123,25 @@ components:
           type: string
       additionalProperties: true
   parameters:
-    Html:
-      name: html
+    Url:
+      name: url
       in: query
-      description: Raw HTML to render. One of url, html, or markdown is required.
+      description: The URL of the website to screenshot.
       schema:
         type: string
-    BlockAds:
-      name: block_ads
-      in: query
-      description: Block advertisements during rendering.
-      schema:
-        type: boolean
-    FullPage:
-      name: full_page
-      in: query
-      description: Capture the entire scrollable page.
-      schema:
-        type: boolean
+        format: uri
     Markdown:
       name: markdown
       in: query
       description: Markdown content to render. One of url, html, or markdown is required.
       schema:
         type: string
-    ViewportWidth:
-      name: viewport_width
+    Html:
+      name: html
       in: query
-      description: Viewport width in pixels.
+      description: Raw HTML to render. One of url, html, or markdown is required.
       schema:
-        type: integer
-        minimum: 1
-    BlockCookieBanners:
-      name: block_cookie_banners
-      in: query
-      description: Block cookie consent banners during rendering.
-      schema:
-        type: boolean
+        type: string
     Format:
       name: format
       in: query
@@ -173,13 +155,25 @@ components:
         - webp
         - gif
         - pdf
-    Url:
-      name: url
+    BlockCookieBanners:
+      name: block_cookie_banners
       in: query
-      description: The URL of the website to screenshot.
+      description: Block cookie consent banners during rendering.
       schema:
-        type: string
-        format: uri
+        type: boolean
+    FullPage:
+      name: full_page
+      in: query
+      description: Capture the entire scrollable page.
+      schema:
+        type: boolean
+    ViewportWidth:
+      name: viewport_width
+      in: query
+      description: Viewport width in pixels.
+      schema:
+        type: integer
+        minimum: 1
     ViewportHeight:
       name: viewport_height
       in: query
@@ -187,6 +181,12 @@ components:
       schema:
         type: integer
         minimum: 1
+    BlockAds:
+      name: block_ads
+      in: query
+      description: Block advertisements during rendering.
+      schema:
+        type: boolean
   securitySchemes:
     accessKeyQuery:
       type: apiKey
